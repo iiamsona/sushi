@@ -8,8 +8,8 @@ import user from '@/public/user.svg';
 import armenian from '@/public/languages/armenian.svg';
 import russian from '@/public/languages/russian.svg';
 import english from '@/public/languages/english.svg';
-import { DownOutlined, GlobalOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, MenuProps } from 'antd';
+import { DownOutlined, GlobalOutlined, SearchOutlined } from '@ant-design/icons';
+import { Button, Dropdown, message, Space, MenuProps, Input } from 'antd';
 
 const handleMenuClick: MenuProps['onClick'] = (e) => {
   message.info(`Click on menu item: ${e.key}`);
@@ -49,11 +49,11 @@ export default function HeaderMenu() {
           <Link href="/menu">Menu</Link>
           <Link href="/delivery">Delivery</Link>
           <Link href="/about_us">About us</Link>
-          <input type="search" name="nav-search" id="nav-search" placeholder="Search..." />
+          <Input className='w-2/5' placeholder="filadelfia" prefix={<SearchOutlined />} />
           <Image src={basket} alt="basket" />
           <Image src={user} alt="user" />
           <Dropdown menu={menuProps}>
-            <Button>
+            <Button style={{ width: 'fit-content' }}>
               <Space>
                 <GlobalOutlined />
                 <DownOutlined />
