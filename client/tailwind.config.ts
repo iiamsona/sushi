@@ -15,7 +15,10 @@ const config: Config = {
       },
       width: {
         '9/10': '90%',
-      }
+      },
+      colors: {
+        'Secondary': '#2F2105',
+      },
     },
   },
   plugins: [],

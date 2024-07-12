@@ -40,16 +40,16 @@ const menuProps = {
 
 export default function HeaderMenu() {
   return (
-    <nav className="flex items-center justify-center w-full">
+    <nav className="flex items-center justify-center w-full absolute">
       <div className="flex justify-between items-center w-9/10">
         <div className="logo">
           <Image src={logo} alt="logo" />
         </div>
-        <div className="menu flex justify-between items-center w-2/5">
-          <Link href="/menu">Menu</Link>
-          <Link href="/delivery">Delivery</Link>
-          <Link href="/about_us">About us</Link>
-          <Input className='w-2/5' placeholder="filadelfia" prefix={<SearchOutlined />} />
+        <div className="menu flex justify-between items-center w-1/2">
+          <Link className='text-Secondary'href="/menu">Menu</Link>
+          <Link className='text-Secondary'href="/delivery">Delivery</Link>
+          <Link className='text-Secondary'href="/about_us">About us</Link>
+          <Input className='w-2/5' placeholder="Filadelfia" prefix={<SearchOutlined />} />
           <Image src={basket} alt="basket" />
           <Image src={user} alt="user" />
           <Dropdown menu={menuProps}>
