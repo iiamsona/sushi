@@ -40,33 +40,16 @@ const menuProps = {
 
 export default function HeaderMenu() {
   return (
-    <nav className='flex'>
-      <div className='container flex justify-between w-full'>
-    <div className='logo'>
-    <Image src={logo} alt="logo" />
-    </div>
-
-    <div className='menu flex justify-center items-center'>
-    <Link href="/menu">Menu</Link>
-    <Link  href="/delivery">Delivery</Link>
-    <Link  href="/about_us">About us</Link>
-    <input type="search" name="nav-search" id="" />
-    <Image src={basket} alt="basket" />
-    <Image  src={user} alt="user" />
-    <Image src={armenian} alt="languages" />
-    <Image src={russian} alt="languages" />
-    <Image src={english} alt="languages" />
-    </div>
-    <nav className="flex items-center justify-center w-full absolute">
-      <div className="flex justify-between items-center w-9/10">
-        <div className="logo">
+    <nav className='flex items-center justify-center w-full'>
+      <div className='container flex justify-between items-center w-full'>
+        <div className='logo'>
           <Image src={logo} alt="logo" />
         </div>
-        <div className="menu flex justify-between items-center w-1/2">
-          <Link className='text-Secondary'href="/menu">Menu</Link>
-          <Link className='text-Secondary'href="/delivery">Delivery</Link>
-          <Link className='text-Secondary'href="/about_us">About us</Link>
-          <Input className='w-2/5' placeholder="Filadelfia" prefix={<SearchOutlined />} />
+        <div className='menu flex items-center space-x-4'>
+          <Link href="/menu">Menu</Link>
+          <Link href="/delivery">Delivery</Link>
+          <Link href="/about_us">About us</Link>
+          <Input className='w-2/5' placeholder="Philadelphia" prefix={<SearchOutlined />} />
           <Image src={basket} alt="basket" />
           <Image src={user} alt="user" />
           <Dropdown menu={menuProps}>
@@ -78,7 +61,6 @@ export default function HeaderMenu() {
             </Button>
           </Dropdown>
         </div>
-
       </div>
     </nav>
   );
