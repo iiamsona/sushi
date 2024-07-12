@@ -1,34 +1,38 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '@/public/logo.svg';
-import basket from '@/public/basket.svg';
-import user from '@/public/user.svg';
-import armenian from '@/public/languages/armenian.svg';
-import russian from '@/public/languages/russian.svg';
-import english from '@/public/languages/english.svg';
-import { DownOutlined, GlobalOutlined, SearchOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, MenuProps, Input } from 'antd';
+"use client";
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/public/logo.svg";
+import basket from "@/public/basket.svg";
+import user from "@/public/user.svg";
+import armenian from "@/public/languages/armenian.svg";
+import russian from "@/public/languages/russian.svg";
+import english from "@/public/languages/english.svg";
+import {
+  DownOutlined,
+  GlobalOutlined,
+  SearchOutlined,
+} from "@ant-design/icons";
+import { Button, Dropdown, message, Space, MenuProps, Input } from "antd";
 
-const handleMenuClick: MenuProps['onClick'] = (e) => {
+const handleMenuClick: MenuProps["onClick"] = (e) => {
   message.info(`Click on menu item: ${e.key}`);
 };
 
-const items: MenuProps['items'] = [
+const items: MenuProps["items"] = [
   {
-    label: 'Armenian',
-    key: '1',
+    label: "Armenian",
+    key: "1",
     icon: <Image src={armenian} alt="Armenian" width={20} height={20} />,
   },
   {
-    label: 'Russian',
-    key: '2',
+    label: "Russian",
+    key: "2",
     icon: <Image src={russian} alt="Russian" width={20} height={20} />,
   },
   {
-    label: 'English',
-    key: '3',
+    label: "English",
+    key: "3",
     icon: <Image src={english} alt="English" width={20} height={20} />,
   },
 ];
@@ -46,14 +50,24 @@ export default function HeaderMenu() {
           <Image src={logo} alt="logo" />
         </div>
         <div className="menu flex justify-between items-center w-1/2">
-          <Link className='text-Secondary'href="/menu">Menu</Link>
-          <Link className='text-Secondary'href="/delivery">Delivery</Link>
-          <Link className='text-Secondary'href="/about_us">About us</Link>
-          <Input className='w-2/5' placeholder="Filadelfia" prefix={<SearchOutlined />} />
+          <Link className="text-Secondary" href="/menu">
+            Menu
+          </Link>
+          <Link className="text-Secondary" href="/delivery">
+            Delivery
+          </Link>
+          <Link className="text-Secondary" href="/about_us">
+            About us
+          </Link>
+          <Input
+            className="w-2/5"
+            placeholder="Filadelfia"
+            prefix={<SearchOutlined />}
+          />
           <Image src={basket} alt="basket" />
           <Image src={user} alt="user" />
           <Dropdown menu={menuProps}>
-            <Button style={{ width: 'fit-content' }}>
+            <Button style={{ width: "fit-content" }}>
               <Space>
                 <GlobalOutlined />
                 <DownOutlined />
