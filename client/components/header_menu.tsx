@@ -15,7 +15,7 @@ export default function Sidebar({ className }: SidebarProps) {
   };
   return (
     <nav>
-
+      
     </nav>
   );
 }
