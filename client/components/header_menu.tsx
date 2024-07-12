@@ -53,7 +53,7 @@ export default function HeaderMenu() {
           <Link className='text-Secondary'href="/menu">Menu</Link>
           <Link className='text-Secondary'href="/delivery">Delivery</Link>
           <Link className='text-Secondary'href="/about_us">About us</Link>
-          <Input className='w-2/5' placeholder="Filadelfia" prefix={<SearchOutlined />} />
+          <Input className='w-2/5' placeholder="filadelfia" prefix={<SearchOutlined />} />
           <Image src={basket} alt="basket" />
           <Image src={user} alt="user" />
           <Dropdown menu={menuProps}>
