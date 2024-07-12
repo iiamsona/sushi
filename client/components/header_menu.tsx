@@ -12,12 +12,12 @@ import english from "@/public/languages/english.svg"
 
 export default function HeaderMenu() {
   return (
-    <nav>
-      <div className='contaioner'>
+    <nav className='flex'>
+      <div className='contaioner flex'>
     <div className='logo'>
     <Image src={logo} alt="logo" />
     </div>
-    <div className='menu'>
+    <div className='menu flex'>
     <Link href="/menu">Menu</Link>
     <Link href="/delivery">Delivery</Link>
     <Link href="/about_us">About us</Link>
