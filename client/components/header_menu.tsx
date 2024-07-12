@@ -13,11 +13,12 @@ import english from "@/public/languages/english.svg"
 export default function HeaderMenu() {
   return (
     <nav className='flex'>
-      <div className='contaioner flex'>
+      <div className='contaioner flex justify-between w-full'>
     <div className='logo'>
     <Image src={logo} alt="logo" />
     </div>
-    <div className='menu flex'>
+
+    <div className='menu flex justify-center items-center'>
     <Link href="/menu">Menu</Link>
     <Link href="/delivery">Delivery</Link>
     <Link href="/about_us">About us</Link>
