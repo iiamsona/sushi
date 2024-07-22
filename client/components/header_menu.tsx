@@ -16,23 +16,23 @@ import {
 import { Button, Dropdown, message, Space, MenuProps, Input } from "antd";
 
 const handleMenuClick: MenuProps["onClick"] = (e) => {
-  message.info(`Click on menu item: ${e.key}`);
+  message.info(`Language: ${e.key}`);
 };
 
 const items: MenuProps["items"] = [
   {
     label: "Armenian",
-    key: "1",
+    key: "Arm",
     icon: <Image src={armenian} alt="Armenian" width={20} height={20} />,
   },
   {
     label: "Russian",
-    key: "2",
+    key: "Rus",
     icon: <Image src={russian} alt="Russian" width={20} height={20} />,
   },
   {
     label: "English",
-    key: "3",
+    key: "Eng",
     icon: <Image src={english} alt="English" width={20} height={20} />,
   },
 ];
@@ -44,7 +44,7 @@ const menuProps = {
 
 export default function HeaderMenu() {
   return (
-    <nav className="flex items-center justify-center w-full">
+    <nav className="flex items-center justify-center w-full bg-main">
       <div className="container flex justify-between items-center w-full">
         <div className="logo">
           <Image src={logo} alt="logo" />

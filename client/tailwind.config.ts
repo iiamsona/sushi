@@ -18,6 +18,8 @@ const config: Config = {
       },
       colors: {
         'Secondary': '#2F2105',
+        'main':'#F6EBDA',
+        'footer':'#F5F5F5',
       },
     },
   },

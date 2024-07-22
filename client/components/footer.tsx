@@ -2,7 +2,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AudioOutlined } from "@ant-design/icons";
+import { AudioOutlined,
+  InstagramOutlined,
+  FacebookOutlined  
+ } from "@ant-design/icons";
 import { Input, Space } from "antd";
 import type { GetProps } from "antd";
 type SearchProps = GetProps<typeof Input.Search>;
@@ -10,8 +13,9 @@ const { Search } = Input;
 
 export default function Footer() {
   return (
-    <div className="flex justify-center w-9/10 self-center">
-      <div className="w-full">
+    
+    <div className="flex justify-center w-full self-center bg-Secondary text-white">
+      <div className="w-9/10">
         <div className="flex justify-between">
           <div className="flex flex-col">
             <div>Compamy</div>
@@ -32,10 +36,10 @@ export default function Footer() {
             <div>Privacy Policy</div>
           </div>
           <div className="flex flex-col">
-            <div>FOLLOW US</div>
-            <div className="flex">
-              <div>Instagram</div>
-              <div>Facebook</div>
+            <div className="text-footer">FOLLOW US</div>
+            <div className="">
+              <div><InstagramOutlined /> <FacebookOutlined /> 
+              </div>
             </div>
             <div>Receive exclusive offers in your mailbox</div>
             <div>
@@ -48,6 +52,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-center">
+          
           All rights Reserved copyright Your Company, 2024
         </div>
       </div>
